@@ -1,0 +1,12 @@
+# MH-Z19 Demo
+
+## はじめに
+
+Livebook for Nervesを用いて、MH-Z19からCO2濃度を読み取ってみましょう。[kentaro/mh_z19_ex](https://github.com/kentaro/mh_z19_ex)を用います。
+
+```elixir
+{:ok, pid} = MhZ19.start_link()
+{:ok, result} = MhZ19.measure(pid)
+```
+
+CO2濃度がちゃんと取得できました！（642なのでこの部屋の空気は問題ないようです）
